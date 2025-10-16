@@ -133,9 +133,10 @@ def get_squash_merge_changes(repo_path, squash_commit_hash, new_filename='packag
     except Exception as e:
         print(f"An error occurred: {e}")
 
-repo_path = 'C:/Users/Downloads/example/' # path of resitory with correct branch in local
+repo_path = 'C:/Users/Downloads/example/' # path of resitory with correct branch in local machine
 squash_hash_list = ['commithash'] # list of commit hash to the branch
-
+package = 'package.xml' # name of the package file to be created
+delete_filename = 'deletePackage.xml' # name of the delete package file to be created
 for i,squash_hash in enumerate(squash_hash_list):
-    get_squash_merge_changes(repo_path, squash_hash, f'package.xml', f'deletePackage.xml') #give the file names
+    get_squash_merge_changes(repo_path, squash_hash, package, delete_filename) #give the file names
 
